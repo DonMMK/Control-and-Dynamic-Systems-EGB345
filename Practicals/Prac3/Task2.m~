@@ -1,0 +1,9 @@
+% Task 2
+
+load('SEA_speed.mat');
+plot(t , SEAspeed)
+
+num = [4674.15];
+den = [1 168.36];
+
+sys = tf(num,den);
