@@ -43,10 +43,9 @@ for i = 4:1:14
     end
 end 
 
-num1sig = num
+num1sig = num;
 den1sig = den(2);
-
-for k = num1sig -3 :0.1:num1sig+3
+for k = num1sig-3:0.1:num1sig+3
     for l = den1sig - 3:0.1:den1sig +3
         
         
@@ -69,10 +68,10 @@ for k = num1sig -3 :0.1:num1sig+3
     end
 end 
 
-num2sig = num2
+num2sig = num2;
 den2sig = den2(2);
-for k = num2sig-.1:0.01:num2sig+.1
-    for l = den2sig - .1:0.01:den2sig +.1
+for k = num2sig-1:0.01:num2sig+1
+    for l = den2sig - 1:0.01:den2sig +1
         
         
         %set up tf function
@@ -96,7 +95,7 @@ end
 
 disp('done');
 
-K_est = num3
+K_est = num3;
 
 alpha_est = den3(2);
 

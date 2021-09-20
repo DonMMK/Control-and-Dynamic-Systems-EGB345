@@ -6,8 +6,8 @@ close all; clear; clc
 %[km, alpha] = GenerateCSVRandom('EGB345RandomData.csv');
 
 % True values for 
-% alpha = 3.166842158940395
-% km = 9.402273945004236
+%alpha = 5.717375811226858; % Estimate for (1 - 7) 0.01
+%km = 9.073618431965894;    % Estimate for (5- 15)
 
 % Read CSV file
 data = readtable('EGB345RandomData.csv');
@@ -30,7 +30,7 @@ Step_Input_Offset = mean(Step_Input_Offset);
 
 bin = ischange(Step_Input, 'linear');
 x = find(bin, 1);
-in = Step_Input(x:x+662);
+in = Step_Input(x:x+539);
 
 
 for i = 1: length(Time)
@@ -69,3 +69,6 @@ save('prelabdata_yn_random_fixed.txt','yn_random_fixed','-ascii');
 
 %alpha_est=1; %% remember to delete this line
 %K_est=1; %% remember to delete this line
+
+t = Shifted_Time;
+ydata = yn_random_fixed;
