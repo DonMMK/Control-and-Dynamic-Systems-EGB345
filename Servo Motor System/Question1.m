@@ -6,8 +6,8 @@ close all; clear; clc
 %[km, alpha] = GenerateCSVRandom('EGB345RandomData.csv');
 
 % True values for 
-%alpha = 5.717375811226858; % Estimate for (1 - 7) 0.01
-%km = 9.073618431965894;    % Estimate for (5- 15)
+%alpha = 4.608909558955339; % Estimate for (1 - 7) 0.01
+%km = 6.492375690272647;    % Estimate for (5- 15)
 
 % Read CSV file
 data = readtable('EGB345RandomData.csv');
@@ -67,8 +67,6 @@ ylabel("Voltage (V)");
 save('prelabdata_yn_random.txt','yn_random','-ascii');
 save('prelabdata_yn_random_fixed.txt','yn_random_fixed','-ascii');
 
-%alpha_est=1; %% remember to delete this line
-%K_est=1; %% remember to delete this line
 
 t = Shifted_Time;
 ydata = yn_random_fixed;
